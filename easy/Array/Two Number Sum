@@ -1,0 +1,19 @@
+#using Hashmap
+#sample:
+{
+  "array": [3, 5, -4, 8, 11, 1, -1, 6],
+  "targetSum": 10
+}
+
+
+#Solution:
+def twoNumberSum(array,targetSum):
+    anotherArray = {}
+    for i in array:
+        p = targetSum - i
+        if p in anotherArray:
+            return [p,i]
+        else:
+            anotherArray[i] = True
+    return []
+  
